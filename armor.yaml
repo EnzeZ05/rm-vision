@@ -1,0 +1,19 @@
+path: C:/Users/13578/Downloads/armor_dataset_v4
+train: lists/train.txt
+val: lists/val.txt
+tests: lists/test.txt
+
+nc: 12
+names:
+  0 : c0
+  1 : c1
+  2 : c2
+  3 : c3
+  4 : c4
+  5 : c5
+  6 : c6
+  7 : c7
+  8 : c8
+  9 : c9
+  10 : c10
+  11 : c11
