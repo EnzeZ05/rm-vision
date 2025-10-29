@@ -1,3 +1,4 @@
+
 //
 // Created by 13578 on 2025/10/27.
 //
@@ -7,8 +8,6 @@
 
 #include <string>
 #include <opencv2/opencv.hpp>
-
-
 
 class Armor {
 public:
@@ -28,7 +27,7 @@ public:
           double min_w_ratio = 0.03,
           double keep_ratio = 0.60);
 
-    bool process(const std::string& img_path, cv::Mat* out_digit_roi = nullptr, bool visualize = false);
+    std::vector<cv::Mat> process(const std::string& img_path, cv::Mat* out_digit_roi = nullptr, bool visualize = false);
     virtual void show(const cv::Mat& ref, const std::string& win = "image");
 
     static std::array<cv::Point2f,4> get_points(const std::vector<cv::Point2f>& pts4);
@@ -37,6 +36,5 @@ public:
     static std::pair<cv::RotatedRect, std::vector<cv::Point2f>>
         extend_min_area_rect(const cv::RotatedRect& rect, float extra_ratio = 0.5f);
 };
-
 
 #endif //ARMOR_H
